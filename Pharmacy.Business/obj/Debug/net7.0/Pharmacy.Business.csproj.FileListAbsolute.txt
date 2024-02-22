@@ -1,0 +1,14 @@
+/Users/yasirhassan/Documents/learning/Pharmacy/Pharmacy.Business/bin/Debug/net7.0/Pharmacy.Business.deps.json
+/Users/yasirhassan/Documents/learning/Pharmacy/Pharmacy.Business/bin/Debug/net7.0/Pharmacy.Business.dll
+/Users/yasirhassan/Documents/learning/Pharmacy/Pharmacy.Business/bin/Debug/net7.0/Pharmacy.Business.pdb
+/Users/yasirhassan/Documents/learning/Pharmacy/Pharmacy.Business/obj/Debug/net7.0/Pharmacy.Business.csproj.AssemblyReference.cache
+/Users/yasirhassan/Documents/learning/Pharmacy/Pharmacy.Business/obj/Debug/net7.0/Pharmacy.Business.GeneratedMSBuildEditorConfig.editorconfig
+/Users/yasirhassan/Documents/learning/Pharmacy/Pharmacy.Business/obj/Debug/net7.0/Pharmacy.Business.AssemblyInfoInputs.cache
+/Users/yasirhassan/Documents/learning/Pharmacy/Pharmacy.Business/obj/Debug/net7.0/Pharmacy.Business.AssemblyInfo.cs
+/Users/yasirhassan/Documents/learning/Pharmacy/Pharmacy.Business/obj/Debug/net7.0/Pharmacy.Business.csproj.CoreCompileInputs.cache
+/Users/yasirhassan/Documents/learning/Pharmacy/Pharmacy.Business/obj/Debug/net7.0/Pharmacy.Business.dll
+/Users/yasirhassan/Documents/learning/Pharmacy/Pharmacy.Business/obj/Debug/net7.0/refint/Pharmacy.Business.dll
+/Users/yasirhassan/Documents/learning/Pharmacy/Pharmacy.Business/obj/Debug/net7.0/Pharmacy.Business.pdb
+/Users/yasirhassan/Documents/learning/Pharmacy/Pharmacy.Business/obj/Debug/net7.0/ref/Pharmacy.Business.dll
+/Users/yasirhassan/Documents/learning/Pharmacy/Pharmacy.Business/bin/Debug/net7.0/Pharmacy.Business.runtimeconfig.json
+/Users/yasirhassan/Documents/learning/Pharmacy/Pharmacy.Business/obj/Debug/net7.0/Pharmacy.Business.genruntimeconfig.cache
