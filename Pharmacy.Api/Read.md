@@ -43,3 +43,7 @@ dotnet ef migrations add InitialCreate
 #2. Update the database
 dotnet ef database update
 ```
+
+// builder.Services.AddDbContext<PharmacyContext>(options =>
+//     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"))
+//         .EnableSensitiveDataLogging());

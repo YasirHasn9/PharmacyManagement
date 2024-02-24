@@ -1,10 +1,10 @@
 namespace Pharmacy.Business;
 
-public class PostgresPharmacySink : IPostgresPharmacySink
+public class SqlPharmacySink : ISqlPharmacySink
 {
     private readonly PharmacyContext _context;
 
-    public PostgresPharmacySink(PharmacyContext context)
+    public SqlPharmacySink(PharmacyContext context)
     {
         _context = context;
     }

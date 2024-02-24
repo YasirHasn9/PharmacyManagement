@@ -8,15 +8,19 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
-builder.Services.AddScoped<IPostgresPharmacySink, PostgresPharmacySink>();
+builder.Services.AddScoped<ISqlPharmacySink, SqlPharmacySink>();
 builder.Services.AddScoped<IPharmacyCreationService, PharmacyCreationService>();
-builder.Services.AddScoped<IPostgresPharmacySource, PostgresPharmacySource>();
+builder.Services.AddScoped<ISqlPharmacySource, SqlPharmacySource>();
 builder.Services.AddScoped<IPharmacyFetchingService, PharmacyFetchingService>();
 builder.Services.AddScoped<IPharmacyUpdatingService, PharmacyUpdatingService>();
 
+builder.Configuration.AddEnvironmentVariables();
+// builder.Services.AddDbContext<PharmacyContext>(options =>
+//     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+//         .EnableSensitiveDataLogging());
+
 builder.Services.AddDbContext<PharmacyContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"))
-        .EnableSensitiveDataLogging());
+    options.UseSqlServer(builder.Configuration.GetConnectionString("PharmacyDatabase")));
 
 builder.Services.AddCors(options =>
 {

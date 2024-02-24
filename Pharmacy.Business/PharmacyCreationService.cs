@@ -3,9 +3,9 @@ namespace Pharmacy.Business;
 public class PharmacyCreationService : IPharmacyCreationService
 
 {
-    private readonly IPostgresPharmacySink _pharmacySink;
+    private readonly ISqlPharmacySink _pharmacySink;
 
-    public PharmacyCreationService(IPostgresPharmacySink pharmacySink)
+    public PharmacyCreationService(ISqlPharmacySink pharmacySink)
     {
         _pharmacySink = pharmacySink;
     }

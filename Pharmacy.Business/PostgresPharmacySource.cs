@@ -2,11 +2,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Pharmacy.Business;
 
-public class PostgresPharmacySource : IPostgresPharmacySource
+public class SqlPharmacySource : ISqlPharmacySource
 {
     private readonly PharmacyContext _dbContext;
 
-    public PostgresPharmacySource(PharmacyContext dbContext)
+    public SqlPharmacySource(PharmacyContext dbContext)
     {
         _dbContext = dbContext;
     }

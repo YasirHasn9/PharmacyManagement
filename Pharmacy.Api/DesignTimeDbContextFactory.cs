@@ -17,10 +17,10 @@ public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<PharmacyCo
 
         var builder = new DbContextOptionsBuilder<PharmacyContext>();
 
-        var connectionString = configuration.GetConnectionString("DefaultConnection");
-        builder.UseNpgsql(connectionString, b => b.MigrationsAssembly("Pharmacy.Api"));
+        var connectionString = configuration.GetConnectionString("PharmacyDatabase");
+        builder.UseSqlServer(connectionString, b => b.MigrationsAssembly("Pharmacy.Api"));
 
-        builder.UseNpgsql(connectionString);
+        builder.UseSqlServer(connectionString);
 
         return new PharmacyContext(builder.Options);
     }

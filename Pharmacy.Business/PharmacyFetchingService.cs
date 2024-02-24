@@ -2,9 +2,9 @@ namespace Pharmacy.Business;
 
 public class PharmacyFetchingService : IPharmacyFetchingService
 {
-    private readonly IPostgresPharmacySource _source;
+    private readonly ISqlPharmacySource _source;
 
-    public PharmacyFetchingService(IPostgresPharmacySource source)
+    public PharmacyFetchingService(ISqlPharmacySource source)
     {
         _source = source;
     }

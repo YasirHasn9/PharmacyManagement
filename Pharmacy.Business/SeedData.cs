@@ -77,3 +77,14 @@ public class SeedData
         }
     }
 }
+
+// protected override void OnModelCreating(ModelBuilder modelBuilder)
+// {
+//     modelBuilder.Entity<Pharmacy>().HasData(
+//         new Pharmacy { Id = 1, Name = "Pharmacy A", Address = "123 Main St", City = "Anytown", State = "TX", Zip = "12345", NumberOfFilledPrescriptions = 100, CreatedDate = DateTime.Now, UpdatedDate = DateTime.Now },
+//         new Pharmacy { Id = 2, Name = "Pharmacy B", Address = "456 Elm St", City = "Anytown", State = "TX", Zip = "67890", NumberOfFilledPrescriptions = 200, CreatedDate = DateTime.Now, UpdatedDate = DateTime.Now },
+//         new Pharmacy { Id = 3, Name = "Pharmacy C", Address = "789 Maple St", City = "Anytown", State = "TX", Zip = "54321", NumberOfFilledPrescriptions = 300, CreatedDate = DateTime.Now, UpdatedDate = DateTime.Now },
+//         new Pharmacy { Id = 4, Name = "Pharmacy D", Address = "101 Oak St", City = "Anytown", State = "TX", Zip = "98765", NumberOfFilledPrescriptions = 400, CreatedDate = DateTime.Now, UpdatedDate = DateTime.Now },
+//         new Pharmacy { Id = 5, Name = "Pharmacy E", Address = "202 Pine St", City = "Anytown", State = "TX", Zip = "24680", NumberOfFilledPrescriptions = 500, CreatedDate = DateTime.Now, UpdatedDate = DateTime.Now }
+//     );
+// }

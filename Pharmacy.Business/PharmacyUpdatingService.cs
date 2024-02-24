@@ -4,11 +4,11 @@ namespace Pharmacy.Business;
 
 public class PharmacyUpdatingService : IPharmacyUpdatingService
 {
-    private readonly IPostgresPharmacySink _pharmacySink;
-    private readonly IPostgresPharmacySource _source;
+    private readonly ISqlPharmacySink _pharmacySink;
+    private readonly ISqlPharmacySource _source;
     private readonly ILogger<PharmacyUpdatingService> _logger;
 
-    public PharmacyUpdatingService(IPostgresPharmacySink pharmacySink, IPostgresPharmacySource source, ILogger<PharmacyUpdatingService> logger)
+    public PharmacyUpdatingService(ISqlPharmacySink pharmacySink, ISqlPharmacySource source, ILogger<PharmacyUpdatingService> logger)
     {
         _pharmacySink = pharmacySink;
         _source = source;

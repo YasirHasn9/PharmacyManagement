@@ -6,7 +6,7 @@ namespace Pharmacy.Test.Pharmacy;
 
 public class PharmacyCreationServiceTests
 {
-    private readonly Mock<IPostgresPharmacySink> _mockPharmacySink = new();
+    private readonly Mock<ISqlPharmacySink> _mockPharmacySink = new();
     private readonly PharmacyCreationService _creationService;
     private readonly CancellationToken _cancellationToken = CancellationToken.None;
     

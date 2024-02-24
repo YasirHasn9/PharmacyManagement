@@ -1,6 +1,6 @@
 namespace Pharmacy.Business;
 
-public interface IPostgresPharmacySink
+public interface ISqlPharmacySink
 {
     Task<Pharmacy> InsertAsync(Pharmacy pharmacy, CancellationToken cancellationToken);
     
