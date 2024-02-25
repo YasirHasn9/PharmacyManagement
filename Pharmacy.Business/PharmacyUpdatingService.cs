@@ -20,29 +20,18 @@ public class PharmacyUpdatingService : IPharmacyUpdatingService
         try
         {
             var pharmacy = await _source.GetByIdAsync(id, cancellationToken);
-            if(pharmacy == null)
+            if (pharmacy == null)
             {
-                throw new Exception("Pharmacy not updated");
+                throw new Exception("Pharmacy not found");
             }
             
-            var pharmacyUpdates = new Pharmacy
-            {
-                Id = pharmacy.Id,
-                Name = updates.Name ?? pharmacy.Name,
-                Address = updates.Address ?? pharmacy.Address,
-                City = updates.City ?? pharmacy.City,
-                State = updates.State ?? pharmacy.State,
-                Zip = updates.Zip ?? pharmacy.Zip,
-                NumberOfFilledPrescriptions = updates.NumberOfFilledPrescriptions,
-                UpdatedDate = DateTime.UtcNow
-            };
-            return await _pharmacySink.UpdateAsync(pharmacyUpdates, cancellationToken);
+            return await _pharmacySink.UpdateAsync(pharmacy.Id, updates, cancellationToken);
         }
         catch (Exception e)
         {
-            // Log the exception message and stack trace for debugging
-            _logger.LogError(e, "Error updating pharmacy with ID {Id}. Exception: {Message}. Stack Trace: {StackTrace}", id, e.Message, e.StackTrace);
-            throw new Exception("Pharmacy not updated");
+            _logger.LogError(e, "Error updating pharmacy with ID {Id}. Exception: {Message}. Stack Trace: {StackTrace}",
+                id,
+                e.Message, e.StackTrace);
             throw new Exception("Pharmacy not updated");
         }
     }

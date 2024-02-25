@@ -25,7 +25,7 @@ public class PharmaciesController : ControllerBase
     }
 
     [HttpGet(Name = nameof(FindPharmacies))]
-    public async Task<ActionResult> FindPharmacies(CancellationToken cancellationToken)
+    public async Task<ActionResult<IEnumerable<Business.Pharmacy>>> FindPharmacies(CancellationToken cancellationToken)
     {
         try
         {
@@ -71,7 +71,7 @@ public class PharmaciesController : ControllerBase
     }
 
     [HttpPut("{pharmacyId}", Name = nameof(UpdatePharmacy))]
-    public async Task<ActionResult> UpdatePharmacy(Guid pharmacyId, [FromBody] PharmacyUpdates updates,
+    public async Task<ActionResult> UpdatePharmacy([FromRoute] Guid pharmacyId, [FromBody] PharmacyUpdates updates,
         CancellationToken cancellationToken)
     {
         try

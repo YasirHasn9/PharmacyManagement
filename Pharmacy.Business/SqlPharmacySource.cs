@@ -13,7 +13,7 @@ public class SqlPharmacySource : ISqlPharmacySource
 
     public async Task<IEnumerable<Pharmacy>> GetAllAsync(CancellationToken cancellationToken)
     {
-        try 
+        try
         {
             var pharmacies = await _dbContext.Pharmacies.ToListAsync(cancellationToken);
             return pharmacies;

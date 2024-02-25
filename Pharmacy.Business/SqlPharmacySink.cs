@@ -22,24 +22,24 @@ public class SqlPharmacySink : ISqlPharmacySink
             throw new Exception("Error inserting new pharmacy.");
         }
     }
-    
-    public async Task<Pharmacy> UpdateAsync(Pharmacy pharmacy, CancellationToken cancellationToken)
+
+    public async Task<Pharmacy> UpdateAsync(Guid id, PharmacyUpdates updates, CancellationToken cancellationToken)
     {
         try
         {
-            var existingPharmacy = await _context.Pharmacies.FindAsync(pharmacy.Id);
+            var existingPharmacy = await _context.Pharmacies.FindAsync(id);
             if (existingPharmacy == null)
             {
                 throw new Exception("Pharmacy not found");
             }
 
-            existingPharmacy.Name = pharmacy.Name;
-            existingPharmacy.Address = pharmacy.Address;
-            existingPharmacy.City = pharmacy.City;
-            existingPharmacy.State = pharmacy.State;
-            existingPharmacy.Zip = pharmacy.Zip;
-            existingPharmacy.NumberOfFilledPrescriptions = pharmacy.NumberOfFilledPrescriptions;
-            existingPharmacy.UpdatedDate = pharmacy.UpdatedDate;
+            existingPharmacy.Name = updates.Name ?? existingPharmacy.Name;
+            existingPharmacy.Address = updates.Address ?? existingPharmacy.Address;
+            existingPharmacy.City = updates.City ?? existingPharmacy.City;
+            existingPharmacy.State = updates.State ?? existingPharmacy.State;
+            existingPharmacy.Zip = updates.Zip ?? existingPharmacy.Zip;
+            existingPharmacy.NumberOfFilledPrescriptions = updates?.NumberOfFilledPrescriptions ?? existingPharmacy.NumberOfFilledPrescriptions;
+            existingPharmacy.UpdatedDate = DateTime.UtcNow;
 
             await _context.SaveChangesAsync(cancellationToken);
             return existingPharmacy;

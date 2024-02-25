@@ -10,10 +10,8 @@
 /Users/yasirhassan/Documents/learning/Pharmacy/Pharmacy.Test/bin/Debug/net7.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll
 /Users/yasirhassan/Documents/learning/Pharmacy/Pharmacy.Test/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.dll
 /Users/yasirhassan/Documents/learning/Pharmacy/Pharmacy.Test/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Abstractions.dll
-/Users/yasirhassan/Documents/learning/Pharmacy/Pharmacy.Test/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Relational.dll
 /Users/yasirhassan/Documents/learning/Pharmacy/Pharmacy.Test/bin/Debug/net7.0/Microsoft.Extensions.Caching.Abstractions.dll
 /Users/yasirhassan/Documents/learning/Pharmacy/Pharmacy.Test/bin/Debug/net7.0/Microsoft.Extensions.Caching.Memory.dll
-/Users/yasirhassan/Documents/learning/Pharmacy/Pharmacy.Test/bin/Debug/net7.0/Microsoft.Extensions.Configuration.Abstractions.dll
 /Users/yasirhassan/Documents/learning/Pharmacy/Pharmacy.Test/bin/Debug/net7.0/Microsoft.Extensions.DependencyInjection.dll
 /Users/yasirhassan/Documents/learning/Pharmacy/Pharmacy.Test/bin/Debug/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
 /Users/yasirhassan/Documents/learning/Pharmacy/Pharmacy.Test/bin/Debug/net7.0/Microsoft.Extensions.Logging.dll
@@ -30,8 +28,6 @@
 /Users/yasirhassan/Documents/learning/Pharmacy/Pharmacy.Test/bin/Debug/net7.0/testhost.dll
 /Users/yasirhassan/Documents/learning/Pharmacy/Pharmacy.Test/bin/Debug/net7.0/Moq.dll
 /Users/yasirhassan/Documents/learning/Pharmacy/Pharmacy.Test/bin/Debug/net7.0/Newtonsoft.Json.dll
-/Users/yasirhassan/Documents/learning/Pharmacy/Pharmacy.Test/bin/Debug/net7.0/Npgsql.dll
-/Users/yasirhassan/Documents/learning/Pharmacy/Pharmacy.Test/bin/Debug/net7.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
 /Users/yasirhassan/Documents/learning/Pharmacy/Pharmacy.Test/bin/Debug/net7.0/NuGet.Frameworks.dll
 /Users/yasirhassan/Documents/learning/Pharmacy/Pharmacy.Test/bin/Debug/net7.0/System.Diagnostics.EventLog.dll
 /Users/yasirhassan/Documents/learning/Pharmacy/Pharmacy.Test/bin/Debug/net7.0/xunit.abstractions.dll
