@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Pharmacy.Business.Drugs;
 using Pharmacy.Business.Pharmacists;
 using Pharmacy.Business.Warehouses;
 
@@ -146,6 +147,66 @@ public class SeedData
                 };
 
                 context.Warehouses.AddRange(warehouses);
+                context.SaveChanges();
+            }
+            
+            if (!context.Drugs.Any())
+            {
+                var drugs = new Drug[]
+                {
+                    new ()
+                    {
+                        Name = "Drug 1",
+                        Description = "Description 1"
+                    },
+                    new ()
+                    {
+                        Name = "Drug 2",
+                        Description = "Description 2"
+                    },
+                    new ()
+                    {
+                        Name = "Drug 3",
+                        Description = "Description 3"
+                    },
+                    new ()
+                    {
+                        Name = "Drug 4",
+                        Description = "Description 4"
+                    },
+                    new ()
+                    {
+                        Name = "Drug 5",
+                        Description = "Description 5"
+                    },
+                    new ()
+                    {
+                        Name = "Drug 6",
+                        Description = "Description 6"
+                    },
+                    new ()
+                    {
+                        Name = "Drug 7",
+                        Description = "Description 7"
+                    },
+                    new ()
+                    {
+                        Name = "Drug 8",
+                        Description = "Description 8"
+                    },
+                    new ()
+                    {
+                        Name = "Drug 9",
+                        Description = "Description 9"
+                    },
+                    new ()
+                    {
+                        Name = "Drug 10",
+                        Description = "Description 10"
+                    }
+                };
+
+                context.Drugs.AddRange(drugs);
                 context.SaveChanges();
             }
         }

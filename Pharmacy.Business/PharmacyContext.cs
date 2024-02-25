@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Pharmacy.Business.Drugs;
 using Pharmacy.Business.Pharmacists;
 using Pharmacy.Business.Warehouses;
 
@@ -12,6 +13,8 @@ public class PharmacyContext : DbContext
     public DbSet<Pharmacist> Pharmacists { get; set; }
     
     public DbSet<Warehouse> Warehouses { get; set; }
+    
+    public DbSet<Drug> Drugs { get; set; }
 }
 
 /*
