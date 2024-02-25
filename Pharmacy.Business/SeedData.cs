@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Pharmacy.Business.Pharmacists;
+using Pharmacy.Business.Warehouses;
 
 namespace Pharmacy.Business;
 
@@ -76,7 +78,7 @@ public class SeedData
 
             var pharmacists = new Pharmacist[]
             {
-                new ()
+                new()
                 {
                     PharmacyId = pharmacies[0].Id,
                     Name = "Pharmacist 1",
@@ -84,7 +86,7 @@ public class SeedData
                     StartDate = DateTime.UtcNow,
                     EndDate = DateTime.UtcNow.AddYears(1)
                 },
-                new ()
+                new()
                 {
                     PharmacyId = pharmacies[1].Id,
                     Name = "Pharmacist 2",
@@ -92,7 +94,7 @@ public class SeedData
                     StartDate = DateTime.UtcNow,
                     EndDate = DateTime.UtcNow.AddYears(1)
                 },
-                new ()
+                new()
                 {
                     PharmacyId = pharmacies[2].Id,
                     Name = "Pharmacist 3",
@@ -100,7 +102,7 @@ public class SeedData
                     StartDate = DateTime.UtcNow,
                     EndDate = DateTime.UtcNow.AddYears(1)
                 },
-                new ()
+                new()
                 {
                     PharmacyId = pharmacies[3].Id,
                     Name = "Pharmacist 4",
@@ -108,7 +110,7 @@ public class SeedData
                     StartDate = DateTime.UtcNow,
                     EndDate = DateTime.UtcNow.AddYears(1)
                 },
-                new ()
+                new()
                 {
                     PharmacyId = pharmacies[4].Id,
                     Name = "Pharmacist 5",
@@ -119,8 +121,33 @@ public class SeedData
             };
 
             context.Pharmacists.AddRange(pharmacists);
-            
+
             context.SaveChanges();
+
+            if (!context.Warehouses.Any())
+            {
+                var warehouses = new Warehouse[]
+                {
+                    new ()
+                    {
+                        Name = "Warehouse 1",
+                        Address = "123 Test St"
+                    },
+                    new ()
+                    {
+                        Name = "Warehouse 2",
+                        Address = "456 Test St"
+                    },
+                    new ()
+                    {
+                        Name = "Warehouse 3",
+                        Address = "789 Test St"
+                    },
+                };
+
+                context.Warehouses.AddRange(warehouses);
+                context.SaveChanges();
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Pharmacy.Business.Pharmacists;
 
 namespace Pharmacy.Business;
 

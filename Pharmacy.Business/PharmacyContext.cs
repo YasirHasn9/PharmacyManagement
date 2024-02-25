@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using Pharmacy.Business.Pharmacists;
+using Pharmacy.Business.Warehouses;
 
 namespace Pharmacy.Business;
 public class PharmacyContext : DbContext
@@ -8,21 +10,14 @@ public class PharmacyContext : DbContext
     public DbSet<Pharmacy> Pharmacies { get; set; } = null!;
     
     public DbSet<Pharmacist> Pharmacists { get; set; }
+    
+    public DbSet<Warehouse> Warehouses { get; set; }
 }
 
 /*
 ```sql
 -- Table 1: Pharmacists
-CREATE TABLE Pharmacists
-(
-    PharmacistID INT PRIMARY KEY,
-    PharmacyID INT,
-    Name NVARCHAR(50),
-    Age INT,
-    StartDate DATE,
-    EndDate DATE,
-    FOREIGN KEY (PharmacyID) REFERENCES Pharmacies(PharmacyID)
-);
+
 
 -- Table 2: Warehouses
 CREATE TABLE Warehouses
