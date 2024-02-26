@@ -38,7 +38,8 @@ public class SqlPharmacySink : ISqlPharmacySink
             existingPharmacy.City = updates.City ?? existingPharmacy.City;
             existingPharmacy.State = updates.State ?? existingPharmacy.State;
             existingPharmacy.Zip = updates.Zip ?? existingPharmacy.Zip;
-            existingPharmacy.NumberOfFilledPrescriptions = updates?.NumberOfFilledPrescriptions ?? existingPharmacy.NumberOfFilledPrescriptions;
+            existingPharmacy.NumberOfFilledPrescriptions = updates?.NumberOfFilledPrescriptions ??
+                                                           existingPharmacy.NumberOfFilledPrescriptions;
             existingPharmacy.UpdatedDate = DateTime.UtcNow;
 
             await _context.SaveChangesAsync(cancellationToken);

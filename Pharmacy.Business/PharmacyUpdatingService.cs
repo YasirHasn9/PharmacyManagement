@@ -8,7 +8,8 @@ public class PharmacyUpdatingService : IPharmacyUpdatingService
     private readonly ISqlPharmacySource _source;
     private readonly ILogger<PharmacyUpdatingService> _logger;
 
-    public PharmacyUpdatingService(ISqlPharmacySink pharmacySink, ISqlPharmacySource source, ILogger<PharmacyUpdatingService> logger)
+    public PharmacyUpdatingService(ISqlPharmacySink pharmacySink, ISqlPharmacySource source,
+        ILogger<PharmacyUpdatingService> logger)
     {
         _pharmacySink = pharmacySink;
         _source = source;
@@ -24,7 +25,7 @@ public class PharmacyUpdatingService : IPharmacyUpdatingService
             {
                 throw new Exception("Pharmacy not found");
             }
-            
+
             return await _pharmacySink.UpdateAsync(pharmacy.Id, updates, cancellationToken);
         }
         catch (Exception e)

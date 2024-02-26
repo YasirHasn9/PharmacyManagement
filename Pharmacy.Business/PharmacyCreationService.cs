@@ -9,7 +9,7 @@ public class PharmacyCreationService : IPharmacyCreationService
     {
         _pharmacySink = pharmacySink;
     }
-    
+
     public async Task<Pharmacy> CreateAsync(NewPharmacy newPharmacy, CancellationToken cancellationToken)
     {
         try

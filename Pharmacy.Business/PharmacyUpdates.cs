@@ -1,4 +1,5 @@
 namespace Pharmacy.Business;
+
 public class PharmacyUpdates
 {
     public string? Name { get; set; }
