@@ -1,6 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using Pharmacy.Business.Pharmacists;
-
 namespace Pharmacy.Business;
 
 public class Pharmacy
@@ -16,5 +14,4 @@ public class Pharmacy
     public DateTime CreatedDate { get; set; }
     public DateTime UpdatedDate { get; set; }
     
-    public ICollection<Pharmacist> Pharmacists { get; set; }
 }

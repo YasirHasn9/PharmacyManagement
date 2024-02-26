@@ -12,8 +12,8 @@ using Pharmacy.Business;
 namespace Pharmacy.Api.Migrations
 {
     [DbContext(typeof(PharmacyContext))]
-    [Migration("20240224174246_SeedPharmacies")]
-    partial class SeedPharmacies
+    [Migration("20240226032818_MigratePharmacies")]
+    partial class MigratePharmacies
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

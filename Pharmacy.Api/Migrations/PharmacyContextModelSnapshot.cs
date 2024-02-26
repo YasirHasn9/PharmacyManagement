@@ -22,35 +22,6 @@ namespace Pharmacy.Api.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Pharmacy.Business.Pharmacists.Pharmacist", b =>
-                {
-                    b.Property<Guid>("PharmacistId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("Age")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("EndDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("PharmacyId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("StartDate")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("PharmacistId");
-
-                    b.HasIndex("PharmacyId");
-
-                    b.ToTable("Pharmacists");
-                });
-
             modelBuilder.Entity("Pharmacy.Business.Pharmacy", b =>
                 {
                     b.Property<Guid>("Id")
@@ -89,41 +60,6 @@ namespace Pharmacy.Api.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Pharmacies");
-                });
-
-            modelBuilder.Entity("Pharmacy.Business.Warehouses.Warehouse", b =>
-                {
-                    b.Property<Guid>("WarehouseId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Address")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("WarehouseId");
-
-                    b.ToTable("Warehouses");
-                });
-
-            modelBuilder.Entity("Pharmacy.Business.Pharmacists.Pharmacist", b =>
-                {
-                    b.HasOne("Pharmacy.Business.Pharmacy", "Pharmacy")
-                        .WithMany("Pharmacists")
-                        .HasForeignKey("PharmacyId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Pharmacy");
-                });
-
-            modelBuilder.Entity("Pharmacy.Business.Pharmacy", b =>
-                {
-                    b.Navigation("Pharmacists");
                 });
 #pragma warning restore 612, 618
         }

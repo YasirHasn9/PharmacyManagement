@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Pharmacy.Api.Migrations
 {
     /// <inheritdoc />
-    public partial class SeedPharmacies : Migration
+    public partial class MigratePharmacies : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
